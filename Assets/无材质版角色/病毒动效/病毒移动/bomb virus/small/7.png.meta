@@ -1,0 +1,100 @@
+fileFormatVersion: 2
+guid: 7cbb68aabc36c451e944e943675d219c
+timeCreated: 1460107962
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 7_0
+    21300002: 7_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 7_0
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 7
+        width: 91
+        height: 62
+      alignment: 9
+      pivot: {x: 0.3823135, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.209473, y: 29}
+        - {x: 27.209473, y: 31}
+        - {x: -29.790527, y: 31}
+        - {x: -34.790527, y: 24}
+        - {x: -34.790527, y: -24}
+        - {x: -19.790527, y: -31}
+        - {x: 14.209473, y: -31}
+        - {x: 20.209473, y: -29}
+        - {x: 36.209473, y: -18}
+      - - {x: 51.209473, y: -20}
+        - {x: 51.209473, y: -22}
+        - {x: 54.209473, y: -25}
+        - {x: 56.209473, y: -25}
+        - {x: 56.209473, y: -18}
+        - {x: 53.209473, y: -18}
+      - - {x: 55.209473, y: 6}
+        - {x: 55.209473, y: 14}
+        - {x: 43.209473, y: 14}
+        - {x: 43.209473, y: 6}
+    - name: 7_1
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 46
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: smallVirusMotion
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

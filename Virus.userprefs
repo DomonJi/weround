@@ -1,0 +1,34 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Virus/NifeVirus.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Controller/BackgroundController.cs" Line="13" Column="71" />
+      <File FileName="Assets/Scripts/Controller/SceneController.cs" Line="49" Column="35" />
+      <File FileName="Assets/Scripts/AntiMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Virus/BombVirus.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/levelScripts/Shop.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Virus/CamouflageVirus.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/levelScripts/LevelSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AntiVirus.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/ProteinManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/ResumeExit.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/ItemManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Items/Item.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/levelScripts/GoldShow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/levelScripts/ProteinLose.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/ObjectManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Virus/Virus.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Virus/LitteVirus.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Virus/InfectedAnti.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Virus/NifeVirus.cs" Line="16" Column="3" />
+      <File FileName="Assets/Scripts/Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Line.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/VirusMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/LineDieExit.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

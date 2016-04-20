@@ -1,0 +1,90 @@
+fileFormatVersion: 2
+guid: f2662743d4a894ec887a3e3e08a63304
+timeCreated: 1460089278
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 14_0
+    21300002: 14_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 14_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 16
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 54.5}
+        - {x: -45, y: 26.5}
+        - {x: -45, y: -18.5}
+        - {x: -30, y: -54.5}
+        - {x: 30, y: -54.5}
+        - {x: 42, y: -52.5}
+        - {x: 45, y: -29.5}
+        - {x: 45, y: 31.5}
+        - {x: 34, y: 54.5}
+    - name: 14_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 51
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: bigVirusMotion
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

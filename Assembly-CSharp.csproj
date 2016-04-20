@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{EAD29086-7071-3560-4C11-4B0AB268FA89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;UNITY_ADS;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\AntiVirusDieExit.cs" />
+     <Compile Include="Assets\BombDieExit.cs" />
+     <Compile Include="Assets\ForeSettingExit.cs" />
+     <Compile Include="Assets\LineDieExit.cs" />
+     <Compile Include="Assets\MoveSpeedChange.cs" />
+     <Compile Include="Assets\NifeNifeExit.cs" />
+     <Compile Include="Assets\OtherDieExit.cs" />
+     <Compile Include="Assets\ResumeExit.cs" />
+     <Compile Include="Assets\Scripts\AntiMovement.cs" />
+     <Compile Include="Assets\Scripts\AntiVirus.cs" />
+     <Compile Include="Assets\Scripts\BackgroundWave.cs" />
+     <Compile Include="Assets\Scripts\Controller\BackgroundController.cs" />
+     <Compile Include="Assets\Scripts\Controller\GameController.cs" />
+     <Compile Include="Assets\Scripts\Controller\ItemManager.cs" />
+     <Compile Include="Assets\Scripts\Controller\ObjectManager.cs" />
+     <Compile Include="Assets\Scripts\Controller\ProteinManager.cs" />
+     <Compile Include="Assets\Scripts\Controller\SceneController.cs" />
+     <Compile Include="Assets\Scripts\ErrorDisplay.cs" />
+     <Compile Include="Assets\Scripts\ItemSystem.cs" />
+     <Compile Include="Assets\Scripts\Items\Antibiotic.cs" />
+     <Compile Include="Assets\Scripts\Items\Explode.cs" />
+     <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Items\UlRay.cs" />
+     <Compile Include="Assets\Scripts\Line.cs" />
+     <Compile Include="Assets\Scripts\LittleVirusMovement.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\NifeMovement.cs" />
+     <Compile Include="Assets\Scripts\Utilities\AllSceneSingleton.cs" />
+     <Compile Include="Assets\Scripts\Utilities\Border.cs" />
+     <Compile Include="Assets\Scripts\Utilities\ObjectPool.cs" />
+     <Compile Include="Assets\Scripts\Utilities\SceneSingleton.cs" />
+     <Compile Include="Assets\Scripts\Virus\BombVirus.cs" />
+     <Compile Include="Assets\Scripts\Virus\CamouflageVirus.cs" />
+     <Compile Include="Assets\Scripts\Virus\InfectedAnti.cs" />
+     <Compile Include="Assets\Scripts\Virus\LitteVirus.cs" />
+     <Compile Include="Assets\Scripts\Virus\NifeVirus.cs" />
+     <Compile Include="Assets\Scripts\Virus\ShieldVirus.cs" />
+     <Compile Include="Assets\Scripts\Virus\Virus.cs" />
+     <Compile Include="Assets\Scripts\VirusMovement.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\CrystalShining.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\GoldShow.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Level.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Level1.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Level2.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Level3.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Level4.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\LevelSelect.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\LinesShining.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\ProteinLose.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\RoundButton.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\RoundConfig.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\RoundSelect.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Shop.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\SimulateParticles.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\StarsShining.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Wind.cs" />
+     <Compile Include="Assets\ShowAds.cs" />
+     <Compile Include="Assets\VirusDieExit.cs" />
+     <None Include="Assets\Materials\reraodong.shader" />
+     <None Include="Assets\无材质版角色\病毒动效\nife切断链条\特别注意.txt" />
+     <None Include="Assets\素材-二级选关素材打包\二级放置按钮展示+金币字体\金币字号.txt" />
+     <None Include="Assets\无材质版角色\病毒动效\nife病毒切断链条\备注.txt" />
+     <None Include="Assets\Materials\Button.shader" />
+     <None Include="Assets\无材质版角色\抗体动态序列帧\抗生素道具-病毒变黑\恢复原状序列帧\这是恢复时备注.txt" />
+     <None Include="Assets\锐字云字库粗圆体GBK\ReadMe.txt" />
+     <None Include="Assets\Materials\SelfIllumination.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>/Users/XmacZone/Documents/Unity Projects/Virus/Assets/plugins/LitJson.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

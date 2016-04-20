@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 0e8b546904acd460aa776bc3062679cf
+timeCreated: 1454236849
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - waveText: {instanceID: 0}
+  - antiPfb: {fileID: 155958, guid: f6bba88902f314909a98a2278f6c6e8f, type: 2}
+  - vPfb: {fileID: 173396, guid: 874581b5c53a74e9390c073c8f657311, type: 2}
+  - shieldPfb: {fileID: 142148, guid: 974900c55e9e2468aa677aa25bdd0033, type: 2}
+  - camouPfb: {fileID: 146390, guid: 2f3b7931c63f5446daad03bcc554ff40, type: 2}
+  - bombPfb: {fileID: 168244, guid: bbc28b01c7eec44078afed23aaa03f0c, type: 2}
+  - infectedAPfb: {fileID: 173396, guid: dc00e3ba41b0c4ed0acd945ed9df9de1, type: 2}
+  - littlePfb: {fileID: 193488, guid: b3abd035aca06412d9a615bccddc9c14, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
