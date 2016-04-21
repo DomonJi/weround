@@ -28,7 +28,7 @@ public class SceneController : SceneSingleton<SceneController>
 
 	[HideInInspector]public bool paused;
 	[HideInInspector]public bool noVirusInScene;
-	[HideInInspector]public bool canOperate = true;
+	public bool canOperate = true;
 
 	//List<Vector3> crossResults;
 	//store the results of vector cross
@@ -118,6 +118,7 @@ public class SceneController : SceneSingleton<SceneController>
 		}
 		if (Input.GetMouseButtonUp (0)) {
 			EndSelection ();
+			canOperate = true;
 		}
 
 		if (startSelecting) {

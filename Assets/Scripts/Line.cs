@@ -42,7 +42,7 @@ public class Line : MonoBehaviour
 			rotateAngle = 360 - rotateAngle;
 		}
 		transform.rotation = Quaternion.Euler (0, 0, rotateAngle);
-		transform.localScale = new Vector3 ((pos - new Vector2 (transform.position.x, transform.position.y)).magnitude * 1f / 2.9f, 1.2f, 1);
+		transform.localScale = new Vector3 ((pos - new Vector2 (transform.position.x, transform.position.y)).magnitude * 1f / 2.93f, 1.1f, 1);
 	}
 
 	public void Disable ()
@@ -57,9 +57,19 @@ public class Line : MonoBehaviour
 		IsCollider = true;
 	}
 
-	public void Broke ()
+	public void StartBroke ()
+	{
+		StartCoroutine (Broke ());
+	}
+
+	IEnumerator Broke ()
 	{
 		GetComponent <Animator> ().SetTrigger ("Broken");
+		SceneController.Instance.canOperate = false;
+		yield return new WaitUntil (() => !IsActive);
+		yield return new WaitForSeconds (0.2f);
+		SceneController.Instance.EndSelection ();
+		SceneController.Instance.canOperate = true;
 	}
 		
 }

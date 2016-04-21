@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Line.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Virus/NifeVirus.cs" Line="43" Column="29" />
+      <File FileName="Assets/Scripts/Line.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/Controller/SceneController.cs" Line="121" Column="22" />
+      <File FileName="Assets/Scripts/levelScripts/Shop.cs" Line="31" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

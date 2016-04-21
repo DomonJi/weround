@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EAD29086-7071-3560-4C11-4B0AB268FA89}</ProjectGuid>
+    <ProjectGuid>{6461BD3E-63CE-3B3F-A55F-29E667352BC2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -121,7 +121,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
- <HintPath>/Users/XmacZone/Documents/Unity Projects/Virus/Assets/plugins/LitJson.dll</HintPath>
+ <HintPath>/Users/XmacZone/Documents/Unity Projects/WEROUND/Assets/plugins/LitJson.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

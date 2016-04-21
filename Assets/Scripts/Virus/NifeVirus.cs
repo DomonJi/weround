@@ -40,16 +40,6 @@ public class NifeVirus : Virus
 
 	public void NifeNife ()
 	{
-		StartCoroutine (KnifeStart ());
-	}
-
-	IEnumerator KnifeStart ()
-	{
-		linetouched.Broke ();
-		SceneController.Instance.canOperate = false;
-		yield return new WaitUntil (() => !linetouched.IsActive);
-		yield return new WaitForSeconds (0.2f);
-		SceneController.Instance.EndSelection ();
-		SceneController.Instance.canOperate = true;
+		linetouched.StartBroke ();
 	}
 }
