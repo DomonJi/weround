@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\Virus\ShieldVirus.cs" />
      <Compile Include="Assets\Scripts\Virus\Virus.cs" />
      <Compile Include="Assets\Scripts\VirusMovement.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\About.cs" />
      <Compile Include="Assets\Scripts\levelScripts\CrystalShining.cs" />
      <Compile Include="Assets\Scripts\levelScripts\GoldShow.cs" />
      <Compile Include="Assets\Scripts\levelScripts\Level.cs" />
@@ -100,6 +101,7 @@
      <Compile Include="Assets\Scripts\levelScripts\Shop.cs" />
      <Compile Include="Assets\Scripts\levelScripts\SimulateParticles.cs" />
      <Compile Include="Assets\Scripts\levelScripts\StarsShining.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\StartScene.cs" />
      <Compile Include="Assets\Scripts\levelScripts\Wind.cs" />
      <Compile Include="Assets\ShowAds.cs" />
      <Compile Include="Assets\VirusDieExit.cs" />

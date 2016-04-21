@@ -108,4 +108,9 @@ public class LevelSelect : SceneSingleton<LevelSelect>
 		}
 		InSetting = false;
 	}
+
+	public void Home ()
+	{
+		SceneManager.LoadScene ("Start");
+	}
 }
