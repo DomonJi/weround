@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.Advertisements;
 
+[SerializeField]
+public enum AdsType
+{
+	RANDOM,
+	DEFAULT
+}
+
 public class ShowAds : MonoBehaviour
 {
-	public bool showed;
+	public AdsType adstype;
 
 	public void ShowAd ()
 	{
@@ -12,16 +19,28 @@ public class ShowAds : MonoBehaviour
 		}
 	}
 
-	void Start ()
-	{
-		showed = false;
-	}
+	//	void Start ()
+	//	{
+	//		showed = false;
+	//	}
+	//
+	//	void FixedUpdate ()
+	//	{
+	//		if (!showed) {
+	//			ShowAd ();
+	//			showed = true;
+	//		}
+	//	}
 
-	void FixedUpdate ()
+	public void Start ()
 	{
-		if (!showed) {
+		if (adstype == AdsType.RANDOM) {
+			if (Random.value > 0.6) {
+				ShowAd ();
+			}
+		}
+		if (adstype == AdsType.DEFAULT) {
 			ShowAd ();
-			showed = true;
 		}
 	}
 }
