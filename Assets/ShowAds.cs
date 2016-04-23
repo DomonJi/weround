@@ -35,7 +35,7 @@ public class ShowAds : MonoBehaviour
 	public void Start ()
 	{
 		if (adstype == AdsType.RANDOM) {
-			if (Random.value > 0.6) {
+			if (Random.value > 0.6 && GameController.Instance.currentRound > 0) {
 				ShowAd ();
 			}
 		}

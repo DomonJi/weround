@@ -1,9 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Shop : SceneSingleton<Shop>
 {
+	public Text explodeNum;
+	public Text antiNum;
+	public Text ulrayNum;
+
+	void Update ()
+	{
+		explodeNum.text = PlayerPrefs.GetInt ("Explode").ToString ();
+		antiNum.text = PlayerPrefs.GetInt ("Antibiotic").ToString ();
+		ulrayNum.text = PlayerPrefs.GetInt ("UlRay").ToString ();
+	}
 
 	public void Back ()
 	{

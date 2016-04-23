@@ -102,6 +102,7 @@
      <Compile Include="Assets\Scripts\levelScripts\SimulateParticles.cs" />
      <Compile Include="Assets\Scripts\levelScripts\StarsShining.cs" />
      <Compile Include="Assets\Scripts\levelScripts\StartScene.cs" />
+     <Compile Include="Assets\Scripts\levelScripts\Switch.cs" />
      <Compile Include="Assets\Scripts\levelScripts\Wind.cs" />
      <Compile Include="Assets\ShowAds.cs" />
      <Compile Include="Assets\VirusDieExit.cs" />
