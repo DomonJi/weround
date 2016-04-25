@@ -7,6 +7,12 @@ public class Shop : SceneSingleton<Shop>
 	public Text explodeNum;
 	public Text antiNum;
 	public Text ulrayNum;
+	public GoldShow goldShow;
+
+	void Start ()
+	{
+		goldShow.preGold = PlayerPrefs.GetInt ("Gold");
+	}
 
 	void Update ()
 	{
@@ -23,6 +29,7 @@ public class Shop : SceneSingleton<Shop>
 	public void BuyExplode ()
 	{
 		if (PlayerPrefs.GetInt ("Gold") >= 500) {
+			goldShow.preGold = PlayerPrefs.GetInt ("Gold");
 			PlayerPrefs.SetInt ("Gold", PlayerPrefs.GetInt ("Gold") - 500);
 			PlayerPrefs.SetInt ("Explode", PlayerPrefs.GetInt ("Explode") + 1);
 		}
@@ -31,6 +38,7 @@ public class Shop : SceneSingleton<Shop>
 	public void BuyAntibiotic ()
 	{
 		if (PlayerPrefs.GetInt ("Gold") >= 100) {
+			goldShow.preGold = PlayerPrefs.GetInt ("Gold");
 			PlayerPrefs.SetInt ("Gold", PlayerPrefs.GetInt ("Gold") - 100);
 			PlayerPrefs.SetInt ("Antibiotic", PlayerPrefs.GetInt ("Antibiotic") + 1);
 		}
@@ -39,6 +47,7 @@ public class Shop : SceneSingleton<Shop>
 	public void BuyUlray ()
 	{
 		if (PlayerPrefs.GetInt ("Gold") >= 200) {
+			goldShow.preGold = PlayerPrefs.GetInt ("Gold");
 			PlayerPrefs.SetInt ("Gold", PlayerPrefs.GetInt ("Gold") - 200);
 			PlayerPrefs.SetInt ("UlRay", PlayerPrefs.GetInt ("UlRay") + 1);
 		}
