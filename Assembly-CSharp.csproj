@@ -48,6 +48,7 @@
      <Compile Include="Assets\AntiVirusDieExit.cs" />
      <Compile Include="Assets\BombDieExit.cs" />
      <Compile Include="Assets\ForeSettingExit.cs" />
+     <Compile Include="Assets\GeneShieldExit.cs" />
      <Compile Include="Assets\LineDieExit.cs" />
      <Compile Include="Assets\MoveSpeedChange.cs" />
      <Compile Include="Assets\NifeNifeExit.cs" />
@@ -106,6 +107,7 @@
      <Compile Include="Assets\Scripts\levelScripts\Wind.cs" />
      <Compile Include="Assets\ShowAds.cs" />
      <Compile Include="Assets\VirusDieExit.cs" />
+     <Compile Include="Assets\WarningExit.cs" />
      <None Include="Assets\Materials\reraodong.shader" />
      <None Include="Assets\无材质版角色\病毒动效\nife切断链条\特别注意.txt" />
      <None Include="Assets\素材-二级选关素材打包\二级放置按钮展示+金币字体\金币字号.txt" />

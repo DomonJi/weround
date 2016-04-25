@@ -9,7 +9,7 @@ public class Shop : SceneSingleton<Shop>
 	public Text ulrayNum;
 	public GoldShow goldShow;
 
-	void Start ()
+	void Awake ()
 	{
 		goldShow.preGold = PlayerPrefs.GetInt ("Gold");
 	}

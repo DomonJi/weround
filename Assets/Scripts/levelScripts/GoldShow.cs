@@ -16,18 +16,19 @@ public class GoldShow : MonoBehaviour
 	public int preGold;
 	Text text;
 	float timer;
-	int baseFontSize;
 	float realGold;
+	public RectTransform rect;
 
 	void Start ()
 	{
 		timer = Time.time;
 		text = GetComponentInChildren<Text> ();
-		baseFontSize = text.fontSize;
 		realGold = preGold;
 		if (showType == ShowType.DelayShowMinus) {
 			text.text = preGold.ToString ();
+			Debug.Log (preGold);
 		}
+		rect = GetComponent <RectTransform> ();
 	}
 
 	void FixedUpdate ()
@@ -37,13 +38,13 @@ public class GoldShow : MonoBehaviour
 		else if (showType == ShowType.DelayShowPlus) {
 			if (Time.time > timer + 0.8f) {
 				if (PlayerPrefs.GetInt ("Gold") - float.Parse (text.text) > 0.9) {
-					Debug.Log (PlayerPrefs.GetInt ("Gold"));
 					//text.text = Mathf.Lerp (float.Parse (text.text), PlayerPrefs.GetInt ("Gold"), 2f * Time.unscaledDeltaTime).ToString ().Split ('.') [0];
 					realGold += ((PlayerPrefs.GetInt ("Gold") - float.Parse (text.text)) * 1.3f + 10) * Time.unscaledDeltaTime;
 					text.text = realGold.ToString ().Split ('.') [0];
-					text.fontSize = (int)((1.08f + 0.08f * Mathf.Sin (50 * Time.time)) * baseFontSize);
+					float scaleFactor = 1.1f + 0.1f * Mathf.Sin (60 * Time.time);
+					rect.localScale = new Vector3 (scaleFactor, scaleFactor, 1);
 				} else {
-					text.fontSize = baseFontSize;
+					rect.localScale = new Vector3 (1, 1, 1);
 				}
 			} else {
 				text.text = preGold.ToString ();
@@ -52,9 +53,10 @@ public class GoldShow : MonoBehaviour
 			if (float.Parse (text.text) - PlayerPrefs.GetInt ("Gold") > 0.9) {
 				realGold -= ((float.Parse (text.text) - PlayerPrefs.GetInt ("Gold")) * 5 + 50) * Time.unscaledDeltaTime;
 				text.text = realGold.ToString ().Split ('.') [0];
-				text.fontSize = (int)((0.94f + 0.06f * Mathf.Sin (50 * Time.time)) * baseFontSize);
+				float scaleFactor = 0.92f + 0.08f * Mathf.Sin (60 * Time.time);
+				rect.localScale = new Vector3 (scaleFactor, scaleFactor, 1);
 			} else {
-				text.fontSize = baseFontSize;
+				rect.localScale = new Vector3 (1, 1, 1);
 			}
 		}
 	}

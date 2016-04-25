@@ -12,7 +12,7 @@ public class SceneController : SceneSingleton<SceneController>
 	public List<AntiVirus> antiVirusOnLine;
 	public List<Virus> virus;
 	public List<Virus> virusToDie;
-	public List<AntiVirus> antiCanInfect;
+	//public List<AntiVirus> antiCanInfect;
 
 	public bool startSelecting;
 	public bool completeSelecting;
@@ -56,7 +56,7 @@ public class SceneController : SceneSingleton<SceneController>
 		//crossResults = new List<Vector3> ();
 		virusToDie = new List<Virus> ();
 		virus = new List<Virus> ();
-		antiCanInfect = new List<AntiVirus> ();
+//		antiCanInfect = new List<AntiVirus> ();
 		menuCanvas.gameObject.SetActive (false);
 		checkInRangeCollider = GetComponent<PolygonCollider2D> (); 
 		Init ();
@@ -89,7 +89,7 @@ public class SceneController : SceneSingleton<SceneController>
 		tickTimer = Time.time;
 		StartCoroutine (Infect ());
 		tickEvent += CalcuACenter;
-		antiCanInfect = new List<AntiVirus> (antiVirus);
+		//antiCanInfect = new List<AntiVirus> (antiVirus);
 		ObjectManager.Instance.StartSpawn ();
 	}
 
@@ -124,9 +124,9 @@ public class SceneController : SceneSingleton<SceneController>
 		if (startSelecting) {
 			focusedAnti.line.LineTo (mainCamera.ScreenToWorldPoint (Input.mousePosition));
 		}
-		antiCanInfect = new List<AntiVirus> (antiVirus);
-		foreach (AntiVirus a in antiVirusOnLine)
-			antiCanInfect.Remove (a);
+//		antiCanInfect = new List<AntiVirus> (antiVirus);
+//		foreach (AntiVirus a in antiVirusOnLine)
+//			antiCanInfect.Remove (a);
 	}
 
 	public void EndSelection ()
@@ -231,11 +231,12 @@ public class SceneController : SceneSingleton<SceneController>
 	IEnumerator Infect ()
 	{
 		while (true) {
-			yield return new WaitUntil (() => Time.time > infectTimer + timeToInfect && antiCanInfect.Count > 0);
+			yield return new WaitUntil (() => Time.time > infectTimer + timeToInfect /*&& antiCanInfect.Count > 0*/);
 			if (canVInfect && virus.Count > 0) {
-				ObjectManager.Instance.AntiTransToVirus (antiCanInfect [Random.Range (0, antiCanInfect.Count - 1)]);
+				antiVirus [Random.Range (0, antiVirus.Count - 1)].transform.FindChild ("Warning").GetComponent <Animator> ().SetTrigger ("Warning");
+				//ObjectManager.Instance.AntiTransToVirus (antiCanInfect [Random.Range (0, antiCanInfect.Count - 1)]);
 				infectTimer = Time.time;
-				CheckGameOver ();
+				//CheckGameOver ();
 			}
 		}
 	}
@@ -291,6 +292,8 @@ public class SceneController : SceneSingleton<SceneController>
 
 	void Lose ()
 	{
+		loseCanvas.GetComponentInChildren<GoldShow> (true).preGold = PlayerPrefs.GetInt ("Gold");
+		PlayerPrefs.SetInt ("Gold", PlayerPrefs.GetInt ("Gold") + 20 + ProteinManager.Instance.protein / 10);
 		loseCanvas.gameObject.SetActive (true);
 	}
 

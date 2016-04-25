@@ -159,11 +159,12 @@ public class ObjectManager : SceneSingleton<ObjectManager>
 
 	public void AntiTransToVirus (AntiVirus a)
 	{
-		if (!a.isSelected) {
-			a.Die ();
-			SceneController.Instance.CheckGameOver ();
-			objPools ["InfectedAnti"].Pop (a.transform.position);
+		if (SceneController.Instance.antiVirusOnLine.Contains (a)) {
+			SceneController.Instance.EndSelection ();
 		}
+		a.Die ();
+		SceneController.Instance.CheckGameOver ();
+		objPools ["InfectedAnti"].Pop (a.transform.position);
 	}
 
 	public void BombBomb (BombVirus b)

@@ -14,6 +14,7 @@ public class Virus : MonoBehaviour
 	public bool canBeDestroyed;
 	public bool canEquipShield;
 	public int shieldRecoverTime = 10;
+	public GameObject shield;
 
 	void Awake ()
 	{
@@ -54,7 +55,7 @@ public class Virus : MonoBehaviour
 	{
 		canEquipShield = true;
 		canBeDestroyed = false;
-		GameObject shield = Instantiate (ObjectManager.Instance.shieldPfb, transform.position, Quaternion.identity)as GameObject;
+		shield = Instantiate (ObjectManager.Instance.shieldPfb, transform.position, Quaternion.identity)as GameObject;
 		shield.transform.SetParent (transform);
 		shieldAnimator = shield.GetComponent <Animator> ();
 	}
@@ -63,8 +64,8 @@ public class Virus : MonoBehaviour
 	{
 		canEquipShield = false;
 		canBeDestroyed = true;
-		var shield = transform.FindChild ("shield(Clone)");
-		Destroy (shield.gameObject);
+		shield = transform.FindChild ("shield(Clone)").gameObject;
+		Destroy (shield);
 	}
 
 	protected virtual void Init ()
@@ -102,22 +103,23 @@ public class Virus : MonoBehaviour
 		ObjectManager.Instance.Push ("Virus", gameObject);
 	}
 
-	protected void EnableShield ()
+	public void EnableShield ()
 	{
 		if (canEquipShield) {
 			canBeDestroyed = false;
 			level = 1;
-			shieldAnimator.SetBool ("HasShield", true);
+			Debug.Log (shieldAnimator);
 		}
 	}
 
-	protected void DisableShield ()
+	public void DisableShield ()
 	{
 		if (!canEquipShield)
 			return;
 		canBeDestroyed = true;
 		level = 0;
-		shieldAnimator.SetBool ("HasShield", false);
+		Debug.Log (shieldAnimator);
+		shieldAnimator.SetTrigger ("Shield");
 		StartCoroutine (RecoverShield ());
 	}
 
@@ -138,8 +140,7 @@ public class Virus : MonoBehaviour
 
 	IEnumerator RecoverShield ()
 	{
-		//set animation
 		yield return new WaitForSeconds (shieldRecoverTime);
-		EnableShield ();
+		shieldAnimator.SetTrigger ("Shield");
 	}
 }
