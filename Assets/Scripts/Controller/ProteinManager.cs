@@ -33,15 +33,6 @@ public class ProteinManager : SceneSingleton<ProteinManager>
 		ProteinButtonEffect.SetBool ("Shine", false);
 	}
 
-	void FixedUpdate ()
-	{
-		if (protein >= antiConsume + (helpTimes + 1) * accelerateNum && SceneController.Instance.virus.Count < 4) {
-			ProteinButtonEffect.SetBool ("Shine", true);
-		} else {
-			ProteinButtonEffect.SetBool ("Shine", false);
-		}
-	}
-
 	void Init ()
 	{
 		protein = 0;
@@ -61,7 +52,10 @@ public class ProteinManager : SceneSingleton<ProteinManager>
 		for (int i = 0; i < text.Length; i++) {
 			text [i].text = protein.ToString ();
 		}
-		produceButton.interactable |= protein >= antiConsume + helpTimes * accelerateNum;
+		if (protein >= antiConsume + (helpTimes + 1) * accelerateNum) {
+			produceButton.interactable = true;
+			ProteinButtonEffect.SetBool ("Shine", true);
+		}
 	}
 
 	public void LoseProtein (int num)
@@ -70,7 +64,10 @@ public class ProteinManager : SceneSingleton<ProteinManager>
 		for (int i = 0; i < text.Length; i++) {
 			text [i].text = protein.ToString ();
 		}
-		produceButton.interactable &= protein >= antiConsume + (helpTimes + 1) * accelerateNum;
+		if (protein <= antiConsume + (helpTimes + 1) * accelerateNum) {
+			produceButton.interactable = false;
+			ProteinButtonEffect.SetBool ("Shine", false);
+		}
 	}
 
 	public void CalcuProtein (Virus[] virusToDie)

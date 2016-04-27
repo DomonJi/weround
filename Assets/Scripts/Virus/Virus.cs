@@ -103,7 +103,7 @@ public class Virus : MonoBehaviour
 		ObjectManager.Instance.Push ("Virus", gameObject);
 	}
 
-	public void EnableShield ()
+	public virtual void EnableShield ()
 	{
 		if (canEquipShield) {
 			canBeDestroyed = false;
@@ -112,7 +112,7 @@ public class Virus : MonoBehaviour
 		}
 	}
 
-	public void DisableShield ()
+	public virtual void DisableShield ()
 	{
 		if (!canEquipShield)
 			return;
