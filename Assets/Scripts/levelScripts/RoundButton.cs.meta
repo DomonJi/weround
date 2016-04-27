@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: 7323ca162e4234ea8bf1973e99bca605
-timeCreated: 1458111399
+timeCreated: 1461727539
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ButtonEffect: {fileID: 146098, guid: f568fc37a0a4f4071b23a8145b324478, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

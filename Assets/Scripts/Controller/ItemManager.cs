@@ -28,4 +28,5 @@ public class ItemManager : SceneSingleton<ItemManager>
 		ulRayItem.Enable ();
 		antibioticItem.Enable ();
 	}
+		
 }

@@ -13,6 +13,7 @@ public class RoundSelect : SceneSingleton<RoundSelect>
 	public string mainScene = "main";
 	public RoundButton[] rounds;
 	public int levelIndex;
+	public GameObject ButtonEffect;
 
 	// Use this for initialization
 	//	void Start ()

@@ -48,6 +48,14 @@ public class RoundButton : MonoBehaviour
 			break;
 		}
 		basicSprite = sprite.sprite;
+		if (state == RoundState.Current) {
+			Instantiate (RoundSelect.Instance.ButtonEffect, transform.position, Quaternion.identity);
+		} else {
+			Transform effect = transform.FindChild ("Button(clone)");
+			if (effect != null) {
+				Destroy (effect.gameObject);
+			}
+		}
 	}
 
 	void OnMouseDown ()

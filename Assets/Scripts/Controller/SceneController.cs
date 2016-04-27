@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Security.Policy;
+using System.Linq;
 
 
 public class SceneController : SceneSingleton<SceneController>
@@ -232,8 +232,8 @@ public class SceneController : SceneSingleton<SceneController>
 	{
 		while (true) {
 			yield return new WaitUntil (() => Time.time > infectTimer + timeToInfect /*&& antiCanInfect.Count > 0*/);
-			if (canVInfect && virus.Count > 0) {
-				antiVirus [Random.Range (0, antiVirus.Count - 1)].transform.FindChild ("Warning").GetComponent <Animator> ().SetTrigger ("Warning");
+			if (canVInfect && !virus.All (v => v is InfectedAnti)) {
+				antiVirus [Random.Range (0, antiVirus.Count - 1)].warningAnimator.SetTrigger ("Warning");
 				//ObjectManager.Instance.AntiTransToVirus (antiCanInfect [Random.Range (0, antiCanInfect.Count - 1)]);
 				infectTimer = Time.time;
 				//CheckGameOver ();
@@ -270,6 +270,7 @@ public class SceneController : SceneSingleton<SceneController>
 
 	void Win ()
 	{
+		antiVirus.ForEach (a => a.warningAnimator.SetTrigger ("Cancle"));
 		if (GameController.Instance.currentLevel == GameController.Instance.unlockLevel) {
 			if (GameController.Instance.unlockRound < 4) {
 				if (GameController.Instance.currentRound == GameController.Instance.unlockRound)

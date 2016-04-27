@@ -6,6 +6,7 @@ public class AntiVirus : MonoBehaviour
 	AntiVirus previous;
 
 	public Movement movement;
+	public Animator warningAnimator;
 	Animator animator;
 	Animator expression;
 	Collider2D colliderTrigger;
@@ -26,6 +27,7 @@ public class AntiVirus : MonoBehaviour
 		expression = transform.FindChild ("Expression").GetComponent <Animator> ();
 		line = GetComponentInChildren<Line> ();
 		movement = GetComponent<Movement> ();
+		warningAnimator = transform.FindChild ("Warning").GetComponent <Animator> ();
 		Init ();
 	}
 

@@ -20,7 +20,15 @@ public class Antibiotic : Item
 	IEnumerator Antibio ()
 	{
 		SceneController.Instance.canVInfect = false;
+		SceneController.Instance.antiVirus.ForEach (a => a.warningAnimator.SetTrigger ("Cancle"));
 		yield return new WaitForSeconds (duration);
 		SceneController.Instance.canVInfect = true;
+	}
+
+	void Start ()
+	{
+		if (GameController.Instance.roundConfigs.levels [GameController.Instance.currentLevel] [GameController.Instance.currentRound].canVInfect < 1) {
+			buttom.interactable = false;
+		}
 	}
 }

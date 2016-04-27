@@ -19,6 +19,7 @@ public class ProteinManager : SceneSingleton<ProteinManager>
 
 	[SerializeField]Text[] text;
 	[SerializeField]Button produceButton;
+	[SerializeField]Animator ProteinButtonEffect;
 
 	int helpTimes = 0;
 
@@ -29,6 +30,16 @@ public class ProteinManager : SceneSingleton<ProteinManager>
 		}
 		Init ();
 		helpTimes = 0;
+		ProteinButtonEffect.SetBool ("Shine", false);
+	}
+
+	void FixedUpdate ()
+	{
+		if (protein >= antiConsume + (helpTimes + 1) * accelerateNum && SceneController.Instance.virus.Count < 4) {
+			ProteinButtonEffect.SetBool ("Shine", true);
+		} else {
+			ProteinButtonEffect.SetBool ("Shine", false);
+		}
 	}
 
 	void Init ()
