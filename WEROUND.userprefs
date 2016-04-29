@@ -2,29 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Virus/BombVirus.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controller/ProteinManager.cs" Line="69" Column="49" />
-      <File FileName="Assets/GeneShieldExit.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controller/SceneController.cs" Line="263" Column="25" />
-      <File FileName="Assets/Scripts/levelScripts/Shop.cs" Line="1" Column="1" />
-      <File FileName="Assets/ShowAds.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Virus/NifeVirus.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Line.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/levelScripts/StartScene.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/levelScripts/About.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/levelScripts/LevelSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/levelScripts/Switch.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/levelScripts/GoldShow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Virus/Virus.cs" Line="122" Column="40" />
-      <File FileName="Assets/Scripts/Virus/CamouflageVirus.cs" Line="1" Column="1" />
-      <File FileName="Assets/WarningExit.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controller/ObjectManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AntiVirus.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/levelScripts/RoundButton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/levelScripts/RoundSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controller/ItemManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Items/Antibiotic.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Items/Item.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Virus/BombVirus.cs" Line="47" Column="3" />
+      <File FileName="Assets/Scripts/Virus/BombVirus.cs" Line="33" Column="4" />
+      <File FileName="Assets/Scripts/Virus/Virus.cs" Line="60" Column="54" />
+      <File FileName="Assets/Scripts/levelScripts/LevelSelect.cs" Line="74" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

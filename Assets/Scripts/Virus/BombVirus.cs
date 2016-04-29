@@ -24,14 +24,13 @@ public class BombVirus : Virus
 
 	IEnumerator Expand ()
 	{
-		if (!canBeDestroyed) {
-			yield return null;
-		}
 		for (int i = 0; i < 6; i++) {
 			yield return new WaitForSeconds (SceneController.Instance.tickInterval);
 		}
-		animator.SetTrigger ("Bomb");
-		transform.FindChild ("Expression").gameObject.SetActive (false);
+		if (canBeDestroyed) {
+			animator.SetTrigger ("Bomb");
+			transform.FindChild ("Expression").gameObject.SetActive (false);
+		}
 	}
 
 	public override void Die ()
@@ -78,5 +77,11 @@ public class BombVirus : Virus
 		Debug.Log (shieldAnimator);
 		shieldAnimator.SetTrigger ("Shield");
 		StartCoroutine (Expand ());
+	}
+
+	public override void EquipShield ()
+	{
+		base.EquipShield ();
+		StopCoroutine (Expand ());
 	}
 }

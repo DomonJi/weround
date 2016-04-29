@@ -13,6 +13,10 @@ public class LevelSelect : SceneSingleton<LevelSelect>
 	bool canMoveNext = true;
 	bool canMovePre = true;
 
+	public const float AndroidMoveSensitive = 0.02f;
+	public const float IOSMoveSensitive = 0.005f;
+	float moveSensitive;
+
 	public event Action<int> levelSelectedEvent;
 
 	public bool inSetting = false;
@@ -31,6 +35,14 @@ public class LevelSelect : SceneSingleton<LevelSelect>
 		curntSelct = GameController.Instance.currentLevel;
 		transform.position = new Vector3 (levelPositions [curntSelct], transform.position.y, 0);
 		levelSelectedEvent (curntSelct);
+		switch (Application.platform) {
+		case RuntimePlatform.Android:
+			moveSensitive = AndroidMoveSensitive;
+			break;
+		case RuntimePlatform.IPhonePlayer:
+			moveSensitive = IOSMoveSensitive;
+			break;
+		}
 	}
 	// Update is called once per frame
 	void FixedUpdate ()
@@ -49,19 +61,19 @@ public class LevelSelect : SceneSingleton<LevelSelect>
 		if (Input.touchCount > 0) {
 			if (Input.GetTouch (0).phase == TouchPhase.Moved) {
 				if (transform.position.x < levelPositions [0] + 2 - 0.02f * Input.GetTouch (0).deltaPosition.x && transform.position.x > levelPositions [GameController.Instance.unlockLevel] - 2 - 0.02f * Input.GetTouch (0).deltaPosition.x) {
-					transform.position += new Vector3 (0.02f * Input.GetTouch (0).deltaPosition.x, 0, 0);
-					if (Input.GetTouch (0).deltaPosition.x < -10 && canMoveNext) {
+					transform.position += new Vector3 (moveSensitive * Input.GetTouch (0).deltaPosition.x, 0, 0);
+					if (Input.GetTouch (0).deltaPosition.x < -800 * moveSensitive && canMoveNext) {
 						if (curntSelct < GameController.Instance.unlockLevel) {
-							transform.position = Vector2.Lerp (transform.position, new Vector2 (levelPositions [curntSelct + 1], transform.position.y), 14f * Time.deltaTime);
+							transform.position = Vector2.Lerp (transform.position, new Vector2 (levelPositions [curntSelct + 1], transform.position.y), 14 * Time.deltaTime);
 							curntSelct++;
 							levelSelectedEvent (curntSelct);
 							canMoveNext = false;
 							canMovePre = true;
 						}
 					}
-					if (Input.GetTouch (0).deltaPosition.x > 10 && canMovePre) {
+					if (Input.GetTouch (0).deltaPosition.x > -800 * moveSensitive && canMovePre) {
 						if (curntSelct > 0) {
-							transform.position = Vector2.Lerp (transform.position, new Vector2 (levelPositions [curntSelct - 1], transform.position.y), 14f * Time.deltaTime);
+							transform.position = Vector2.Lerp (transform.position, new Vector2 (levelPositions [curntSelct - 1], transform.position.y), 14 * Time.deltaTime);
 							curntSelct--;
 							levelSelectedEvent (curntSelct);
 							canMoveNext = true;
@@ -73,7 +85,7 @@ public class LevelSelect : SceneSingleton<LevelSelect>
 			return;
 		}
 		if (!inSetting) {
-			transform.position = Vector2.Lerp (transform.position, new Vector2 (levelPositions [curntSelct], transform.position.y), 14f * Time.deltaTime);
+			transform.position = Vector2.Lerp (transform.position, new Vector2 (levelPositions [curntSelct], transform.position.y), 14 * Time.deltaTime);
 			canMoveNext = true;
 			canMovePre = true;
 		}

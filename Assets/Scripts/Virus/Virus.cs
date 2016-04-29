@@ -51,7 +51,7 @@ public class Virus : MonoBehaviour
 		}
 	}
 
-	public void EquipShield ()
+	public virtual void EquipShield ()
 	{
 		canEquipShield = true;
 		canBeDestroyed = false;
